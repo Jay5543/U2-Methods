@@ -1,15 +1,29 @@
+import javax.swing.*;
 public class CircleCalc {
 
 
     public static void main(String[] args) {
 
-        //create and run the program
+       double radiusInput = input("What is the radius?");
+       double area = area(radiusInput);
+       double circumference = circumference(radiusInput);
+       JOptionPane.showMessageDialog(null, output(area, circumference));
 
     }
+    public static double input(String prompt){
+        return Double.parseDouble(JOptionPane.showInputDialog(prompt));
+    }
 
-    //re-write the method to calculate a circle's area using parameters and return statement
+    public static double area(double radiusInput){
+        return Math.round(Math.pow(radiusInput, 2) * Math.PI * 10.0)/10.0;
+    }
+
+    public static double circumference(double radiusInput){
+        return Math.round(2 * radiusInput * Math.PI * 10.0) / 10.0;
 
 
-    //re-write the method to calculate a circle's perimeter using parameters and return statement
-
+    }
+    public static String output(double area, double circumference){
+        return "The area is: " + area + "\nCircumference is: " + circumference;
+    }
 }
