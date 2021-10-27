@@ -23,6 +23,7 @@ out put
         JButton conversionButton = new JButton("Click to have it in meters");
         JButton otherConversionButton = new JButton("Click to have it in feet I guess");
 
+
         //window.setSize(1600, 1900);
         window.setExtendedState(JFrame.MAXIMIZED_BOTH);
         window.setUndecorated(true);
@@ -35,6 +36,8 @@ out put
         window.add(panel);
         panel.add(conversionButton);
         panel.add(otherConversionButton);
+
+
 
         window.setVisible(true);
 
